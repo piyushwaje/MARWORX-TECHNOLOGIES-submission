@@ -1,0 +1,65 @@
+{
+  "project_info": {
+    "project_number": "744855907134",
+    "firebase_url": "https://flutter-first-project-d0d5b-default-rtdb.firebaseio.com",
+    "project_id": "flutter-first-project-d0d5b",
+    "storage_bucket": "flutter-first-project-d0d5b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:744855907134:android:867d3ba1e8e6578c2a5a6f",
+        "android_client_info": {
+          "package_name": "com.example.chatapplicationforprojects"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFFAXHcEoy0chpTYbDDdP6e9VZtG5tXqQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "744855907134-0mtqbjlav1dpbvhckmsmvv3s9qv2gr3v.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.project"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:744855907134:android:70beefb5f4b07ace2a5a6f",
+        "android_client_info": {
+          "package_name": "com.example.managejob"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFFAXHcEoy0chpTYbDDdP6e9VZtG5tXqQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "744855907134-0mtqbjlav1dpbvhckmsmvv3s9qv2gr3v.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.project"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
