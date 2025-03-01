@@ -1,5 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_downloader/flutter_downloader.dart';
+import 'package:path_provider/path_provider.dart';
 import 'package:uuid/uuid.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -222,15 +224,17 @@ class ApplicationsPage extends StatelessWidget {
 
   ApplicationsPage({required this.companyName, required this.jobTitle});
 
-  void _launchResumeUrl(BuildContext context, String url) async {
-    if (await canLaunch(url)) {
-      await launch(url);
-    } else {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Could not launch URL')),
-      );
-    }
+
+
+  void downloadFile(String url) async {
+    final taskId = await FlutterDownloader.enqueue(
+      url: url,
+      savedDir: (await getExternalStorageDirectory())!.path,
+      showNotification: true,
+      openFileFromNotification: true,
+    );
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -269,7 +273,7 @@ class ApplicationsPage extends StatelessWidget {
                       Text('Job Title: ${application['jobTitle']}'),
                       SizedBox(height: 10),
                       ElevatedButton(
-                        onPressed: () => _launchResumeUrl(context, application['resumeUrl']),
+                        onPressed: () => downloadFile(application['resumeUrl']),
                         child: Text('Open Resume'),
                       ),
                       Text('Applied At: ${application['appliedAt']}'),

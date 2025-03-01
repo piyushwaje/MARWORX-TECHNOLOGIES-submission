@@ -64,42 +64,44 @@ class _SignUpPageuserState extends State<SignUpPageuser> {
       body: Center(
         child: Padding(
           padding: EdgeInsets.all(16.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              _buildTextField(_nameController, 'Full Name', Icons.person),
-              _buildTextField(_emailController, 'Email', Icons.email, TextInputType.emailAddress),
-              _buildTextField(_passwordController, 'Password', Icons.lock, TextInputType.text, ),
-              _buildTextField(_educationController, 'Education', Icons.school),
-              _buildTextField(_skillsController, 'Skills (comma-separated)', Icons.build),
-              _buildTextField(_experienceYearsController, 'Experience (Years)', Icons.timelapse, TextInputType.number),
-              _buildTextField(_experienceMonthsController, 'Experience (Months)', Icons.timelapse, TextInputType.number),
-              SizedBox(height: 20),
-              ElevatedButton(
-                onPressed: _signUp,
-                style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.symmetric(horizontal: 50, vertical: 12),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                _buildTextField(_nameController, 'Full Name', Icons.person),
+                _buildTextField(_emailController, 'Email', Icons.email, TextInputType.emailAddress),
+                _buildTextField(_passwordController, 'Password', Icons.lock, TextInputType.text, ),
+                _buildTextField(_educationController, 'Education', Icons.school),
+                _buildTextField(_skillsController, 'Skills (comma-separated)', Icons.build),
+                _buildTextField(_experienceYearsController, 'Experience (Years)', Icons.timelapse, TextInputType.number),
+                _buildTextField(_experienceMonthsController, 'Experience (Months)', Icons.timelapse, TextInputType.number),
+                SizedBox(height: 20),
+                ElevatedButton(
+                  onPressed: _signUp,
+                  style: ElevatedButton.styleFrom(
+                    padding: EdgeInsets.symmetric(horizontal: 50, vertical: 12),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    textStyle: TextStyle(fontSize: 18),
                   ),
-                  textStyle: TextStyle(fontSize: 18),
+                  child: Text('Sign Up'),
                 ),
-                child: Text('Sign Up'),
-              ),
-              SizedBox(height: 10),
-              TextButton(
-                onPressed: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (context) => LoginPageUser()),
-                  );
-                },
-                child: Text(
-                  'Already have an account? Login',
-                  style: TextStyle(fontSize: 16, color: Colors.blueAccent),
+                SizedBox(height: 10),
+                TextButton(
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => LoginPageUser()),
+                    );
+                  },
+                  child: Text(
+                    'Already have an account? Login',
+                    style: TextStyle(fontSize: 16, color: Colors.blueAccent),
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

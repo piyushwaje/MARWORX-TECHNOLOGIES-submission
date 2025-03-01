@@ -1,4 +1,5 @@
 
+import 'package:flutter_downloader/flutter_downloader.dart';
 import 'package:managejob/admin/adminlogin.dart';
 
 
@@ -10,6 +11,7 @@ import 'firebase_options.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await FlutterDownloader.initialize(debug: true);
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform, // Use the generated options
   );
