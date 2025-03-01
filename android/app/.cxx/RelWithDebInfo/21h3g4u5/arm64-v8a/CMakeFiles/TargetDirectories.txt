@@ -1,0 +1,2 @@
+/Users/piyushsakharamwaje/Desktop/managejob/android/app/.cxx/RelWithDebInfo/21h3g4u5/arm64-v8a/CMakeFiles/edit_cache.dir
+/Users/piyushsakharamwaje/Desktop/managejob/android/app/.cxx/RelWithDebInfo/21h3g4u5/arm64-v8a/CMakeFiles/rebuild_cache.dir
